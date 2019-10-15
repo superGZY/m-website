@@ -1,0 +1,37 @@
+<div class="index-container">
+  <header>猫眼电影</header>
+  <a class="downapp">
+    <div class="logo-img"></div>
+    <div class="info-wrapper">
+      <div class="title">猫眼</div>
+      <div class="content">0 元看电影，天天领现金</div>
+    </div>
+    <div class="link-btn">立即领取</div>
+  </a>
+  <div class="topbar">
+    <div class="city-entry">
+      <span class="city-name">北京</span>
+      <i class="yo-ico">&#xe69b;</i>
+    </div>
+    <div class="switch-hot">
+      <a class="hot-item active" href="#position">正在热映</a>
+      <a class="hot-item" href="#nextshow">即将上映</a>
+    </div>
+    <div class="search-icon"></div>
+  </div>
+  <main></main>
+  <div class="bottom-nav-bar">
+    <a href="#position" class="nav-icon-wrapper current">
+      <i class="yo-ico">&#xe87f;</i>
+      <p class="nav-text">电影</p>
+    </a>
+    <a href="#cinema" class="nav-icon-wrapper">
+      <i class="yo-ico">&#xe87a;</i>
+      <p class="nav-text">影院</p>
+    </a>
+    <a href="#profile" class="nav-icon-wrapper">
+      <i class="yo-ico">&#xe874;</i>
+      <p class="nav-text">我的</p>
+    </a>
+  </div>
+</div>

@@ -1,0 +1,19 @@
+{{each list}}
+<div class="item">
+    <div class="main-block">
+        <div class="default-img-bg">
+            <img src="{{$value.img}}"/>
+        </div>
+        <div class="content">
+            <div class="movie-title">{{$value.nm}}</div>
+            <div class="person-data">
+                <span class="person">{{$value.wish}}</span>
+                <span class="p-suffix">人想看</span>
+            </div>
+            <div class="actor">{{$value.star}}</div>
+            <div class="show-date"><span>{{$value.rt}}<span>上映</div>
+        </div>
+        <div class="btn pre">预售</div>
+    </div>
+</div>
+{{/each}}

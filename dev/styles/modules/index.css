@@ -1,0 +1,90 @@
+.index-container header {
+  height: .515rem;
+  background: #e54847;
+  color: #fff;
+  font-size: .18rem;
+  line-height: .505rem;
+  text-align: center; }
+
+.index-container .downapp {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  height: .6rem;
+  width: 100%; }
+  .index-container .downapp .logo-img {
+    width: 0.42rem;
+    height: 0.42rem;
+    margin-left: .11rem;
+    margin-right: .06rem;
+    background: url(http://p0.meituan.net/moviemachine/08d3ecf9c6fa9964c85d1f23b8d8fcb87541.png) no-repeat;
+    background-size: contain; }
+  .index-container .downapp .info-wrapper {
+    flex: 1; }
+    .index-container .downapp .info-wrapper .title {
+      font-size: .15rem;
+      color: #333;
+      margin-bottom: .01rem;
+      font-weight: bold;
+      line-height: .23rem;
+      text-align: left; }
+    .index-container .downapp .info-wrapper .content {
+      font-size: .11rem;
+      color: #666;
+      line-height: .16rem;
+      text-align: left; }
+  .index-container .downapp .link-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 0.96rem;
+    height: 0.42rem;
+    margin-right: .06rem;
+    background: #f03d37;
+    border-radius: .22rem;
+    color: #fff;
+    font-size: .13rem;
+    line-height: .42rem; }
+    .index-container .downapp .link-btn::after {
+      content: '';
+      display: block;
+      width: 0.19rem;
+      height: 0.19rem;
+      margin-left: .05rem;
+      background: url(http://p0.meituan.net/moviemachine/89857785f50685578fa61e1883251da95640.png) no-repeat;
+      background-size: contain; }
+
+.index-container .topbar {
+  height: .44rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff; }
+  .index-container .topbar .city-entry {
+    width: 0.62rem;
+    height: 0.2rem;
+    padding-left: .15rem; }
+  .index-container .topbar .switch-hot {
+    display: flex;
+    height: 100%;
+    position: relative; }
+    .index-container .topbar .switch-hot::after {
+      display: block;
+      content: '';
+      position: absolute;
+      width: .8rem;
+      width: 21.33333vw;
+      height: .02rem;
+      background: #ef4238;
+      left: .12rem;
+      bottom: -0.01rem; }
+    .index-container .topbar .switch-hot .hot-item {
+      font-size: .15rem;
+      margin: 0 .12rem;
+      color: #666;
+      font-weight: 700;
+      line-height: .44rem;
+      width: 21.33333vw;
+      text-align: center; }
+    .index-container .topbar .switch-hot .active {
+      color: #ef4238; }

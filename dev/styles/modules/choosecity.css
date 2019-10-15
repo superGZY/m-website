@@ -1,0 +1,154 @@
+@charset "UTF-8";
+.choosecity {
+  background: #fff;
+  height: 100%;
+  overflow: scroll;
+  /*显示点击是哪个字母*/
+  /*城市弹层*/ }
+  .choosecity div, .choosecity dl, .choosecity dt, .choosecity dd, .choosecity ul, .choosecity li, .choosecity form, .choosecity input, .choosecity button, .choosecity h1, .choosecity h2, .choosecity h3, .choosecity h4, .choosecity h5, .choosecity h6, .choosecity p {
+    margin: 0 auto;
+    padding: 0;
+    font-family: "微软雅黑";
+    color: #105eae; }
+  .choosecity ul, .choosecity li, .choosecity dl, .choosecity dt, .choosecity dd {
+    display: block;
+    list-style: none; }
+  .choosecity body {
+    color: #333; }
+  .choosecity a {
+    text-decoration: none;
+    outline: none;
+    width: 40px;
+    display: block; }
+  .choosecity .fl {
+    float: left; }
+  .choosecity .fr {
+    float: right; }
+  .choosecity .none {
+    display: none; }
+  .choosecity .loan_jm1 {
+    width: 94%;
+    margin: 0 auto; }
+  .choosecity .loan_jm_spa1 {
+    width: 39%;
+    height: 40px;
+    line-height: 40px;
+    font-size: 1em;
+    color: #666;
+    display: block;
+    float: left; }
+  .choosecity .loan_jm_l1 {
+    margin-top: 10px;
+    margin-bottom: 15px;
+    height: 40px; }
+  .choosecity .wbk_srn {
+    width: 57%;
+    height: 40px;
+    border: 1px solid #ccc;
+    background: #FFF;
+    float: left;
+    padding-left: 3%;
+    line-height: 40px;
+    color: #ADADAD;
+    font-size: 1.1em;
+    background-size: 45%;
+    background-position: center;
+    background: #fff; }
+  .choosecity .wbk_srn b {
+    width: 30px;
+    height: 40px;
+    border: 1px solid #ccc;
+    background: #FFF;
+    float: left;
+    padding-left: 3%;
+    line-height: 40px;
+    color: #ADADAD;
+    font-size: 1.1em; }
+  .choosecity .showLetter {
+    position: fixed;
+    color: #105eae;
+    width: 50px;
+    height: 50px;
+    top: 45%;
+    left: 45%;
+    border-radius: 50%;
+    border: #105eae 1px solid;
+    text-align: center;
+    display: none; }
+  .choosecity .showLetter span {
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 30px; }
+  .choosecity .seach {
+    width: 90%;
+    height: 45px;
+    padding-top: 10px;
+    background: #fff; }
+  .choosecity .seach input {
+    width: 90%;
+    height: 45px;
+    font-size: 16px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 1px solid #eee;
+    color: #000; }
+  .choosecity .container {
+    width: 90%;
+    right: 20;
+    overflow-y: scroll; }
+  .choosecity .letter {
+    width: auto;
+    position: fixed;
+    top: 0px;
+    right: 5px;
+    text-align: center; }
+  .choosecity .letter ul {
+    list-style-type: none; }
+  .choosecity .letter ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px; }
+  .choosecity .city {
+    width: 90%;
+    padding: 20px 20px 20px 10px; }
+  .choosecity .history {
+    margin-top: 15px; }
+  .choosecity .hot {
+    overflow: hidden; }
+  .choosecity .hot div {
+    display: block;
+    width: 29%;
+    height: 40px;
+    float: left;
+    text-align: center;
+    line-height: 40px;
+    color: #333;
+    margin-top: 10px;
+    margin-right: 3%;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis; }
+  .choosecity .clear-history {
+    display: block;
+    float: right; }
+  .choosecity .city-list {
+    width: 100%; }
+  .choosecity .city-list .city-letter {
+    font-size: 20px;
+    display: inline-block;
+    padding-top: 15px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #e8ecf1;
+    width: 100%; }
+  .choosecity .city-list p {
+    color: #333;
+    width: 95%;
+    min-height: 50px;
+    line-height: 50px;
+    border-bottom: 1px solid #e8ecf1;
+    cursor: pointer; }
+  .choosecity .UISelect {
+    margin-top: 5px; }

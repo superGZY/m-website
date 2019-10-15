@@ -1,0 +1,13 @@
+<div class="list-container">
+    <div class="head">
+        <img src="/assets/images/arrow.png" />
+        下拉刷新
+    </div>
+    <ul class="list-ul">
+        
+    </ul>
+    <div class="foot">
+        <img src="/assets/images/arrow.png"/>
+        加载更多
+    </div>
+</div>

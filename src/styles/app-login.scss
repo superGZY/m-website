@@ -1,0 +1,104 @@
+@import './yo/usage/core/reset.scss';
+#root {
+    height: 100%;
+}  
+body{
+    background: #F8F8F8;
+}
+header{
+    height: .515rem;
+    background:  #df2d2d;
+    color: #fff;
+    font-size: .18rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .nav-wrap-left{
+        height: .505rem;
+        line-height: .505rem;
+        padding:0 .15rem;
+        a{
+            font-size: .4rem;
+            color: #fff;
+        }
+    }
+    h1{
+        flex: 1;
+        font-weight: normal;
+        text-align: center;
+    }
+  }
+#log-choice{
+    .tab-log{
+        padding:0 .1rem;
+        display: flex;
+        @include border(0 0 4px 0,#d6d6d6);
+        background: #fff;
+        li{
+            flex:1;
+            text-align: center;
+            font-size: .125rem;
+            padding: .14rem 0 .1rem 0;
+            a{
+                color: #222222;
+            }
+        }
+        li.chose{
+            @include border(0 0 4px 0,#ffd000);
+            &::after{
+                z-index: 1000;
+            }
+        }
+    }
+}
+#normal-login-form{
+    .input{
+        background: #fff;
+        padding-left: .1rem;
+        div{
+            padding: .14rem .1rem .14rem 0;
+            overflow: hidden;
+            @include border(0 0 1px 0,#d6d6d6);
+            height: .43rem;
+            display: flex;
+            align-items: center;
+            input{
+                width: 100%;
+                display: block;
+                border:none;
+                height: .3rem;
+                text-indent: .05rem;
+                border-radius: .03rem;
+                &:focus{
+                    background: #ECECEC;
+                    
+                }
+            }
+        }
+    }
+    .button{
+        margin:.14rem .1rem;
+    }
+    #btn{
+        padding: 0 .16rem;
+        border:none;
+        background: #df2d2d;
+        height:.3rem;
+        width: 100%;
+        color: #fff;
+        border-radius: .03rem;
+        text-align: center;
+        line-height: .3rem;
+    }
+    .subline{
+        margin: .14rem .1rem;
+        display: flex;
+        justify-content: space-between;
+        li{
+            a{
+                font-size: .13rem;
+                color: #FE8C00;
+            }
+        }
+    }
+}

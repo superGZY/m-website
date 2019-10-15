@@ -1,0 +1,75 @@
+body{
+    color: #F3F3F3;
+}
+.profile-wrap{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+header{
+    height: .505rem;
+    background:#e54847;
+    color: #fff;
+}
+.my-center{
+    flex: 1;
+    .header{
+        background: url(http://s0.meituan.net/bs/file/?f=myfe/canary:static/deploy/dpmmweb/client/dpmmweb/component/mycenter/img/bg.png) no-repeat;
+        height: 1.5rem;
+        text-align: center;
+        img{
+            width: 0.6rem;
+            height: .6rem;
+            display: inline-block;
+            margin-top:.3rem;
+            border-radius: 50%;
+            border: 3px solid #fff;
+            box-sizing: content-box;
+        }
+        .name{
+            text-align: center;
+        }
+    }
+    .container{
+        .group{
+            margin-top:.1rem;
+            background: #fff;
+            padding: 0 .15rem;
+            color: #333;
+            overflow: hidden;
+            .title{
+                margin-top:.13rem;
+                text-align: center;
+                font-size: .15rem;
+                line-height: .21rem;
+            }
+            .list-two{
+                display: flex;
+                .order-item{
+                    margin-top:.18rem;
+                    height:.97rem;
+                    width: 50%;
+                    text-align: center;
+                    a{
+                        display: block;
+                        height: .9rem;
+                    }
+                    p{
+                        margin-top:.53rem;
+                        color: #333;
+                    }
+                }
+                .movie{
+                    background: url(http://s0.meituan.net/bs/file/?f=myfe/canary:static/deploy/dpmmweb/client/dpmmweb/component/mycenter/img/movie.png) no-repeat;
+                    background-size:.42rem auto;
+                    background-position: top;
+                }
+                .shop{
+                    background: url(http://s0.meituan.net/bs/file/?f=myfe/canary:static/deploy/dpmmweb/client/dpmmweb/component/mycenter/img/store.png) no-repeat;
+                    background-size:.42rem auto;
+                    background-position: top;
+                }
+            }
+        }
+    }
+}

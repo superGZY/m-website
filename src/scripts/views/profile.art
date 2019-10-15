@@ -1,0 +1,36 @@
+<div class="profile-wrap">
+    <header>我的</header>
+    <div class="my-center">
+        <div class="header">
+            <img src="https://img.meituan.net/maoyanuser/eb034d2079940678c7c4222a833bde7510190.png"/>
+            <div class="name"></div>
+        </div>
+        <div class="container">
+            <div class="group">
+                <div class="title">我的订单</div>
+                <div class="list-two">
+                    <div class="order-item movie">
+                            <a><p>电影</p></a>
+                    </div>
+                    <div class="order-item shop">
+                            <a><p>商城</p></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bottom-nav-bar">
+    <a href="#position" class="nav-icon-wrapper current">
+      <i class="yo-ico">&#xe87f;</i>
+      <p class="nav-text">电影</p>
+    </a>
+    <a href="#cinema" class="nav-icon-wrapper">
+      <i class="yo-ico">&#xe87a;</i>
+      <p class="nav-text">影院</p>
+    </a>
+    <a href="#profile" class="nav-icon-wrapper">
+      <i class="yo-ico">&#xe874;</i>
+      <p class="nav-text">我的</p>
+    </a>
+  </div>
+</div>

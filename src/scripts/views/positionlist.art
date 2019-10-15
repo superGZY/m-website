@@ -1,0 +1,33 @@
+{{each list}}
+    <li data-id="{{$value.id}}" class="a-film">
+        <div class="avatar">
+            <img src="{{$value.img}}"/>
+        </div>
+        <div class="content-wrapper">
+            <div class="column-content">
+                <div class="name-box">
+                    <div class="movie-title">{{$value.nm}}</div>
+                    <span class="version {{$value.version}}"></span>
+                </div>
+                <div class="detail-column {{$value.globalReleased}}">
+                    <div class="score">
+                        <span class="score-suffix">观众评</span>
+                        <span class="grade">{{$value.sc}}</span>
+                    </div>
+                    <div class="wish">
+                        <span class="person">{{$value.wish}}</span>
+                        <span class="p-suffix">人想看</span>
+                    </div>
+                    <div class="actor">{{$value.star}}</div>
+                    <div class="show-info">{{$value.showInfo}}</div>
+                </div>
+            </div>
+        </div>
+        <div class="button-block">
+            <div class="btn normal {{$value.globalReleased}}">
+                <span class="buy pre">预售</span>
+                <span class="buy now">购票</span>
+            </div>
+        </div>
+    </li>
+{{/each}}

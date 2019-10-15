@@ -1,0 +1,75 @@
+.film-mes .img-mes {
+  height: 1.88rem;
+  position: relative; }
+  .film-mes .img-mes .poster-bg333 {
+    position: absolute;
+    background: #333;
+    width: 100%;
+    height: 100%;
+    z-index: -1; }
+  .film-mes .img-mes .poster-bg {
+    background-image: url(http://p0.meituan.net/148.208/movie/cddf92d0ac6a0db837a1bc488b241c42267927.jpg);
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+    position: absolute;
+    -webkit-filter: blur(0.15rem);
+    filter: blur(0.15rem);
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: .55; }
+  .film-mes .img-mes .poster {
+    width: 100%;
+    height: 100%;
+    padding: .19rem .3rem .19rem .15rem;
+    display: flex; }
+    .film-mes .img-mes .poster img {
+      height: 100%;
+      width: 1.1rem; }
+    .film-mes .img-mes .poster .content {
+      margin-left: .125rem;
+      overflow: hidden;
+      line-height: 1;
+      font-size: .12rem;
+      opacity: .8;
+      color: #fff; }
+      .film-mes .img-mes .poster .content .title {
+        font-size: .2rem;
+        margin-top: .02rem;
+        font-weight: 700; }
+      .film-mes .img-mes .poster .content .title-en-name {
+        margin-top: .1rem;
+        font-size: .12rem;
+        opacity: .8; }
+      .film-mes .img-mes .poster .content .score {
+        font-size: .18rem;
+        font-weight: 700;
+        color: #fc0;
+        margin-top: .11rem;
+        opacity: 1; }
+        .film-mes .img-mes .poster .content .score span {
+          font-size: .12rem;
+          color: #fff;
+          opacity: .8;
+          margin-left: .06rem; }
+      .film-mes .img-mes .poster .content .type, .film-mes .img-mes .poster .content .src, .film-mes .img-mes .poster .content .pubDesc {
+        margin-top: .1rem; }
+
+.film-mes #showDays {
+  width: 100%;
+  height: 0.45rem;
+  background-color: #fff;
+  overflow-x: scroll; }
+  .film-mes #showDays #timeline {
+    height: .45rem;
+    overflow-x: scroll;
+    white-space: nowrap; }
+    .film-mes #showDays #timeline .showDay {
+      width: 1.15rem;
+      display: inline-block;
+      font-size: .14rem;
+      color: #666;
+      line-height: .43rem;
+      text-align: center;
+      margin-left: .045rem; }

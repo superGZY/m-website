@@ -1,0 +1,63 @@
+<div class="film-all">
+{{each list}}
+<header>
+    <div class="nav-wrap-left">
+        <a class="react-back" href="javascript:history.back(-1)">&lt;</a>
+    </div>
+    <h1>{{$value.nm}}</h1> 
+</header>
+<a class="downapp">
+    <div class="logo-img"></div>
+    <div class="info-wrapper">
+      <div class="title">猫眼</div>
+      <div class="content">0 元看电影，天天领现金</div>
+    </div>
+    <div class="link-btn">立即领取</div>
+</a>
+<div class="film-mes">
+    <div class="img-mes">
+        <div class="poster-bg333"></div>
+        <div class="poster-bg"></div>
+        <div class="poster">
+            <img src="{{$value.img}}"/>
+            <div class="content">
+                <div class="title">{{$value.nm}}</div>
+                <div class="title-en-name">{{$value.enm}}</div>
+                <div class="score">{{$value.sc}}<span class="sum">({{$value.snum}}万人评)</span></div>
+                <div class="type">{{$value.cat}}</div>
+                <div class="src">{{$value.src}}/<span>{{$value.dur}}</span>分钟</div>
+                <div class="pubDesc">{{$value.pubDesc}}</div>
+            </div>
+        </div>
+    </div>
+    <div class="film-filter-bar">
+        <div id="showDays">
+            <ul id="timeline">
+
+            </ul>
+        </div>
+        <div class="nav-wrap filter-nav-wrap">
+            <div class="tab mb-line-b">
+                <div class="item">
+                    全城
+                    <span class="drop"></span>
+                </div>
+                <div class="item">
+                    品牌
+                    <span class="drop"></span>
+                </div>
+                <div class="item">
+                    特色
+                    <span class="drop"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="cinema-list cinema">
+        <div class="list-wrap">
+            
+        </div>
+    </div>
+</div>
+{{/each}}
+</div>
