@@ -14,6 +14,8 @@ class Cinema{
         })
         $('.list-wrap').html(filmlist);
         $('.min-show-block').css('display','none');
+        let hotelHistory = localStorage.getItem('hotelHistory');
+        $('.city-entry .city-name').html(hotelHistory);
     }
 }
 export default new Cinema()

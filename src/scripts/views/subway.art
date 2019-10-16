@@ -1,0 +1,3 @@
+{{each subway}}
+    <div data-id="{{$value.id}}">{{$value.name}}<span>（{{$value.count}}）</span></div>
+{{/each}}

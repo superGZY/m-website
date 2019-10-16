@@ -33,7 +33,8 @@ class Nextshow{
         $('main').html(html);
        
         //发送get请求数据
-        let result = await positionajax.get('/api/ajax/mostExpected?ci=1&limit=10&offset=0&token=');
+        //http://m.maoyan.com/ajax/mostExpected?ci=1&limit=10&offset=0&token=62616X9RVDfaPbRb9oy3hYh1XNAAAAAAPAkAACH0Cpmqh-hkFySfq_hCSohwyvrxhjNj5AQqqtd-0RWaSpSY0eIDsMVesR37rxhKXw
+        let result = await positionajax.get('/api/ajax/mostExpected?ci=1&limit=10&offset=0&token=62616X9RVDfaPbRb9oy3hYh1XNAAAAAAPAkAACH0Cpmqh-hkFySfq_hCSohwyvrxhjNj5AQqqtd-0RWaSpSY0eIDsMVesR37rxhKXw');
         let resultComing = result.coming;
 
         //图片路径修正

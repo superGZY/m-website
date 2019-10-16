@@ -1,0 +1,34 @@
+<div class="film-filter-bar">
+    <div id="showDays2">
+        <ul id="timeline2">
+        </ul>
+    </div>
+    <div class="nav-wrap filter-nav-wrap">
+        <div class="tab mb-line-b">
+            <div class="item">
+                全城
+                <span class="drop"></span>
+            </div>
+            <div class="item">
+                品牌
+                <span class="drop"></span>
+            </div>
+            <div class="item">
+                特色
+                <span class="drop"></span>
+            </div>
+        </div>
+    </div>
+    <ul class="tab">
+        <li class="item">商区</li>
+        <li class="item chosen">地铁站</li>
+    </ul>
+    <div class="list-list">
+        <div id="region-sidenav">
+            <div id="subway"></div>
+        </div>
+        <div id="region-list-item">
+            <div id="filter-list"></div>
+        </div>
+    </div>
+</div>

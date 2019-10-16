@@ -38,16 +38,16 @@
         </div>
         <div class="nav-wrap filter-nav-wrap">
             <div class="tab mb-line-b">
-                <div class="item">
-                    全城
+                <div class="item chosenTitle">
+                    <span class="lonm">全城</span>
                     <span class="drop"></span>
                 </div>
                 <div class="item">
-                    品牌
+                    <span class="lonm">品牌</span>
                     <span class="drop"></span>
                 </div>
                 <div class="item">
-                    特色
+                    <span class="lonm">特色</span>
                     <span class="drop"></span>
                 </div>
             </div>

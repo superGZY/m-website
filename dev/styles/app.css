@@ -1261,9 +1261,26 @@ a {
   transform: rotate(180deg); }
 
 /*公共样式*/
+.mask {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 999;
+  background: rgba(0, 0, 0, 0.3);
+  width: 100%;
+  height: 100%; }
+
+.bg {
+  width: 100%;
+  height: 90%;
+  background: #f5f5f5;
+  z-index: 1001;
+  position: absolute;
+  left: 0;
+  bottom: 0; }
+
 .nav-wrap.filter-nav-wrap {
   width: 100%;
-  height: 0.40rem;
   background: #fff;
   box-sizing: content-box;
   position: relative;
@@ -1534,10 +1551,6 @@ a {
   height: 100%;
   overflow-y: scroll; }
 
-/* .film-filter-bar{
-    position: sticky;
-    top:0;
-} */
 header {
   height: .515rem;
   background: #e54847;
@@ -1692,16 +1705,18 @@ header {
       .film-mes .img-mes .poster .content .type, .film-mes .img-mes .poster .content .src, .film-mes .img-mes .poster .content .pubDesc {
         margin-top: .1rem; }
 
-.film-mes #showDays {
+#showDays {
+  overflow-x: scroll; }
+
+#showDays, #showDays2 {
   width: 100%;
   height: 0.45rem;
-  overflow-x: scroll;
   background: #fff; }
-  .film-mes #showDays #timeline {
+  #showDays #timeline, #showDays #timeline2, #showDays2 #timeline, #showDays2 #timeline2 {
     height: .45rem;
     overflow-x: scroll;
     white-space: nowrap; }
-    .film-mes #showDays #timeline .showDay {
+    #showDays #timeline .showDay, #showDays #timeline2 .showDay, #showDays2 #timeline .showDay, #showDays2 #timeline2 .showDay {
       width: 1.15rem;
       display: inline-block;
       font-size: .14rem;
@@ -1710,10 +1725,10 @@ header {
       height: .45rem;
       text-align: center;
       margin-left: .045rem; }
-    .film-mes #showDays #timeline .showDay.chosen {
+    #showDays #timeline .showDay.chosen, #showDays #timeline2 .showDay.chosen, #showDays2 #timeline .showDay.chosen, #showDays2 #timeline2 .showDay.chosen {
       color: #f03d37;
       position: relative; }
-      .film-mes #showDays #timeline .showDay.chosen::after {
+      #showDays #timeline .showDay.chosen::after, #showDays #timeline2 .showDay.chosen::after, #showDays2 #timeline .showDay.chosen::after, #showDays2 #timeline2 .showDay.chosen::after {
         pointer-events: none;
         position: absolute;
         z-index: 999;
@@ -1726,21 +1741,103 @@ header {
         -webkit-transform-origin: 0 0;
         transform-origin: 0 0; }
         @media (max--moz-device-pixel-ratio: 1.49), (-webkit-max-device-pixel-ratio: 1.49), (max-device-pixel-ratio: 1.49), (max-resolution: 143dpi), (max-resolution: 1.49dppx) {
-          .film-mes #showDays #timeline .showDay.chosen::after {
+          #showDays #timeline .showDay.chosen::after, #showDays #timeline2 .showDay.chosen::after, #showDays2 #timeline .showDay.chosen::after, #showDays2 #timeline2 .showDay.chosen::after {
             width: 100%;
             height: 100%; } }
         @media (min--moz-device-pixel-ratio: 1.5) and (max--moz-device-pixel-ratio: 2.49), (-webkit-min-device-pixel-ratio: 1.5) and (-webkit-max-device-pixel-ratio: 2.49), (min-device-pixel-ratio: 1.5) and (max-device-pixel-ratio: 2.49), (min-resolution: 144dpi) and (max-resolution: 239dpi), (min-resolution: 1.5dppx) and (max-resolution: 2.49dppx) {
-          .film-mes #showDays #timeline .showDay.chosen::after {
+          #showDays #timeline .showDay.chosen::after, #showDays #timeline2 .showDay.chosen::after, #showDays2 #timeline .showDay.chosen::after, #showDays2 #timeline2 .showDay.chosen::after {
             width: 200%;
             height: 200%;
             -webkit-transform: scale(0.5);
             transform: scale(0.5); } }
         @media (min--moz-device-pixel-ratio: 2.5), (-webkit-min-device-pixel-ratio: 2.5), (min-device-pixel-ratio: 2.5), (min-resolution: 240dpi), (min-resolution: 2.5dppx) {
-          .film-mes #showDays #timeline .showDay.chosen::after {
+          #showDays #timeline .showDay.chosen::after, #showDays #timeline2 .showDay.chosen::after, #showDays2 #timeline .showDay.chosen::after, #showDays2 #timeline2 .showDay.chosen::after {
             width: 300%;
             height: 300%;
             -webkit-transform: scale(0.33333);
             transform: scale(0.33333); } }
+
+.tab {
+  width: 100%;
+  display: flex;
+  background: #fff; }
+  .tab .item {
+    width: 50%;
+    height: 100%;
+    line-height: .44rem;
+    text-align: center;
+    color: #777; }
+  .tab .item.chosen {
+    color: #f03d37;
+    position: relative; }
+    .tab .item.chosen::after {
+      pointer-events: none;
+      position: absolute;
+      z-index: 999;
+      top: 0;
+      left: 0;
+      content: "\0020";
+      border-color: #f03d37;
+      border-style: solid;
+      border-width: 0 0 2px 0;
+      -webkit-transform-origin: 0 0;
+      transform-origin: 0 0; }
+      @media (max--moz-device-pixel-ratio: 1.49), (-webkit-max-device-pixel-ratio: 1.49), (max-device-pixel-ratio: 1.49), (max-resolution: 143dpi), (max-resolution: 1.49dppx) {
+        .tab .item.chosen::after {
+          width: 100%;
+          height: 100%; } }
+      @media (min--moz-device-pixel-ratio: 1.5) and (max--moz-device-pixel-ratio: 2.49), (-webkit-min-device-pixel-ratio: 1.5) and (-webkit-max-device-pixel-ratio: 2.49), (min-device-pixel-ratio: 1.5) and (max-device-pixel-ratio: 2.49), (min-resolution: 144dpi) and (max-resolution: 239dpi), (min-resolution: 1.5dppx) and (max-resolution: 2.49dppx) {
+        .tab .item.chosen::after {
+          width: 200%;
+          height: 200%;
+          -webkit-transform: scale(0.5);
+          transform: scale(0.5); } }
+      @media (min--moz-device-pixel-ratio: 2.5), (-webkit-min-device-pixel-ratio: 2.5), (min-device-pixel-ratio: 2.5), (min-resolution: 240dpi), (min-resolution: 2.5dppx) {
+        .tab .item.chosen::after {
+          width: 300%;
+          height: 300%;
+          -webkit-transform: scale(0.33333);
+          transform: scale(0.33333); } }
+
+.film-filter-bar {
+  display: flex;
+  flex-direction: column;
+  height: 100%; }
+
+.list-list {
+  flex: 1;
+  display: flex;
+  height: 100%; }
+
+#region-sidenav {
+  width: 35%;
+  overflow-y: scroll; }
+  #region-sidenav #subway {
+    min-height: 100%;
+    overflow-y: scroll;
+    background: #fff; }
+    #region-sidenav #subway div {
+      height: .44rem;
+      padding: 0 .15rem 0 .1rem;
+      color: #777;
+      line-height: .44rem; }
+
+#filter-list {
+  background: #f5f5f5; }
+  #filter-list div {
+    position: relative;
+    height: .45rem;
+    line-height: .45rem;
+    padding: 0 0 0 .25rem;
+    color: #777; }
+
+#region-list-item {
+  width: 65%;
+  height: 100%;
+  overflow-y: scroll; }
+
+.gray {
+  background: #f5f5f5; }
 
 .choosecity {
   background: #fff;
@@ -1941,6 +2038,8 @@ header {
     display: flex;
     align-items: center;
     justify-items: center; }
+    .topbar .topbar-bg .city-name {
+      color: #777; }
     .topbar .topbar-bg .search-entry {
       display: flex;
       align-items: center;

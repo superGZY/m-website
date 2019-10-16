@@ -3,7 +3,7 @@
     <div class="topbar">
         <div class="topbar-bg">
                 <div class="city-entry">
-                    <span class="city-name">北京</span>
+                    <a class="city-name" href="#citychoose">北京</a>
                     <i class="yo-ico">&#xe69b;</i>
                 </div>
             <div class="search-entry search-input">
