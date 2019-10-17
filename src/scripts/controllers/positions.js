@@ -52,7 +52,7 @@ class Position {
 
     // 开始要隐藏下拉刷新的div
     bScroll.scrollBy(0, -40);
-
+    console.log(result);
     //下拉刷新
     bScroll.on('scrollEnd',async function(){
       if(this.y >=0){
@@ -106,6 +106,10 @@ class Position {
       if(that.num>= result.total){
         $('.foot').html('已经到底啦~');
       }
+      //点击切换hash
+      $('main .list-ul li').on('tap',function(){
+        location.hash = 'film'+$(this).attr('data-id');
+      })
     })
     
     bScroll.on('scroll', function() {

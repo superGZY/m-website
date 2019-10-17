@@ -8,7 +8,8 @@ class Profile{
             window.location.href = 'http://10.9.49.176:8000/app-login.html'
         }
         let html = profileView({})
-        $('#root').html(html);
+        $('#root').html(html)
+        $('.header .name').html(localStorage.getItem('username'))
     }
 }
 export default new Profile()

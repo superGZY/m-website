@@ -40,13 +40,13 @@ class Citychose{
             $('body').on('click', '.city-list p', function () {
                 var data = $(this).text();
                 localStorage.setItem('hotelHistory', data);
-                window.history.go(-1);
+                location.hash = localStorage.getItem('history');
             });
         
             $('.hot.hotCity').on('click', 'div', function () {
                 var data = $(this).text();
                 localStorage.setItem('hotelHistory', data);
-                window.history.go(-1);
+                location.hash = localStorage.getItem('history');
             });
         
         })

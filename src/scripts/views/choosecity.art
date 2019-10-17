@@ -3,28 +3,28 @@
     <ul>
       <li><a href="javascript:;">热门</a></li>
       <li><a href="javascript:;">历史</a></li>
-      <li><a href="javascript:;">A</a></li>
-      <li><a href="javascript:;">B</a></li>
-      <li><a href="javascript:;">C</a></li>
-      <li><a href="javascript:;">D</a></li>
-      <li><a href="javascript:;">E</a></li>
-      <li><a href="javascript:;">F</a></li>
-      <li><a href="javascript:;">G</a></li>
-      <li><a href="javascript:;">H</a></li>
-      <li><a href="javascript:;">J</a></li>
-      <li><a href="javascript:;">K</a></li>
-      <li><a href="javascript:;">L</a></li>
-      <li><a href="javascript:;">M</a></li>
-      <li><a href="javascript:;">N</a></li>
-      <li><a href="javascript:;">P</a></li>
-      <li><a href="javascript:;">Q</a></li>
-      <li><a href="javascript:;">R</a></li>
-      <li><a href="javascript:;">S</a></li>
-      <li><a href="javascript:;">T</a></li>
-      <li><a href="javascript:;">W</a></li>
-      <li><a href="javascript:;">X</a></li>
-      <li><a href="javascript:;">Y</a></li>
-      <li><a href="javascript:;">Z</a></li>
+      <li><a href="#A1">A</a></li>
+      <li><a href="#B1">B</a></li>
+      <li><a href="#C1">C</a></li>
+      <li><a href="#D1">D</a></li>
+      <li><a href="#E1">E</a></li>
+      <li><a href="#F1">F</a></li>
+      <li><a href="#G1">G</a></li>
+      <li><a href="#H1">H</a></li>
+      <li><a href="#J1">J</a></li>
+      <li><a href="#K1">K</a></li>
+      <li><a href="#L1">L</a></li>
+      <li><a href="#M1">M</a></li>
+      <li><a href="#N1">N</a></li>
+      <li><a href="#P1">P</a></li>
+      <li><a href="#Q1">Q</a></li>
+      <li><a href="#R1">R</a></li>
+      <li><a href="#S1">S</a></li>
+      <li><a href="#T1">T</a></li>
+      <li><a href="#W1">W</a></li>
+      <li><a href="#X1">X</a></li>
+      <li><a href="#Y1">Y</a></li>
+      <li><a href="#Z1">Z</a></li>
     </ul>
   </div>
 <!--城市列表-->

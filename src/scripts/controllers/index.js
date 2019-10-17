@@ -14,7 +14,8 @@ class Index {
     $('.topbar .city-name').html(hotelHistory);
     //点击切换路由
     $('.topbar .city-entry').on('tap', function(){
-      location.hash = 'citychoose';
+      localStorage.setItem('history',location.hash)
+      location.hash = 'citychoose'
     }) 
   }
 }

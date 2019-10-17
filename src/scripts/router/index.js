@@ -2,7 +2,7 @@ import indexController from "../controllers/index"
 import positionController from "../controllers/positions"
 import nextshowController from "../controllers/nextshow"
 import filmController from "../controllers/film"
-import IndecController from "../controllers/index"
+import IndexController from "../controllers/index"
 import citychooseController from "../controllers/choosecity"
 import cinemaController from "../controllers/cinema"
 import profileController from "../controllers/profile"
@@ -31,22 +31,26 @@ class Router{
     }
     render(){
         window.addEventListener('hashchange',()=>{
-            IndecController.render();
+            
             /* this.hash[location.hash.substring(1)+'Controller'].render(); */
-            let hash = location.hash.substr(1)
-            //渲染DOM
-            this.renderDom(hash);
-            this.setAcitve(hash);
+            let hash = location.hash.substr(1);
+                //渲染DOM
+                if( !(/[A-Z]1/.test(hash))){
+                    console.log(12);
+                    IndexController.render();
+                    this.renderDom(hash);
+                    this.setAcitve(hash);
+                }
         })
         window.addEventListener('load', ()=>{
             let hash = location.hash.substr(1) || 'position'
             indexController.render()
             location.hash = hash
-
-            // 初始化的时候也需要渲染DOM和设置高亮
-            this.renderDom(hash);
-            this.setAcitve(hash);
-
+            if( !(/[A-Z]1/.test(hash))){
+                // 初始化的时候也需要渲染DOM和设置高亮
+                this.renderDom(hash);
+                this.setAcitve(hash);
+            }
         })   
     }
 }

@@ -16,6 +16,10 @@ class Cinema{
         $('.min-show-block').css('display','none');
         let hotelHistory = localStorage.getItem('hotelHistory');
         $('.city-entry .city-name').html(hotelHistory);
+        $('.city-entry').on('tap', function(){
+            localStorage.setItem('history',location.hash)
+            location.hash = 'citychoose'
+        })
     }
 }
 export default new Cinema()
