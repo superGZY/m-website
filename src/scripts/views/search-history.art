@@ -1,0 +1,7 @@
+{{each searchhistory}}
+<div class="history-item">
+    <span class="history-icon"></span>
+    <span class="word-one-line">{{$value}}</span>
+    <span class="del-word"></span>
+</div>
+{{/each}}

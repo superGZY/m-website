@@ -61,3 +61,6 @@
 </div>
 {{/each}}
 </div>
+<div class="mask" style="display: none;"></div>
+<div class="bg" style="display: none;"></div>
+<div class="bg2" style="display: none;"></div>

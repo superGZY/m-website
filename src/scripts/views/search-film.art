@@ -1,0 +1,25 @@
+{{each list}}
+<div class="movie cell" data-id="{{$value.id}}">
+    <img class="poster" src="{{$value.img}}"/>
+    <div class="info">
+        <div class="name-score">
+            <p class="name">
+                <span class="one-line">{{$value.nm}}</span>
+                <span class="version "></span>
+            </p>
+            <span class="wish">
+                <span class="num">{{$value.wish}}</span>
+                人想看
+            </span>
+        </div>
+        <div class="detail-section">
+            <div class="detail-items">
+                <p class="ename">{{$value.enm}}</p>
+                <p class="catogary">{{$value.cat}}</p>
+                <p class="release">{{$value.time}}</p>
+            </div>
+            <div class="btn toggle-wish-btn">想看</div>
+        </div>
+    </div>
+</div>
+{{/each}}

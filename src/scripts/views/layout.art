@@ -17,7 +17,7 @@
       <a class="hot-item active" href="#position">正在热映</a>
       <a class="hot-item" href="#nextshow">即将上映</a>
     </div>
-    <div class="search-icon"></div>
+    <a class="search-icon" href="#search"></a>
   </div>
   <main></main>
   <div class="bottom-nav-bar">

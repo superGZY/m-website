@@ -6,6 +6,7 @@ import IndexController from "../controllers/index"
 import citychooseController from "../controllers/choosecity"
 import cinemaController from "../controllers/cinema"
 import profileController from "../controllers/profile"
+import searchController from "../controllers/search"
 
 class Router{
     constructor (){
@@ -21,7 +22,8 @@ class Router{
             filmController,
             citychooseController,
             cinemaController,
-            profileController
+            profileController,
+            searchController
         }
         pagecontroller[hash + 'Controller'].render()
     }
@@ -36,7 +38,6 @@ class Router{
             let hash = location.hash.substr(1);
                 //渲染DOM
                 if( !(/[A-Z]1/.test(hash))){
-                    console.log(12);
                     IndexController.render();
                     this.renderDom(hash);
                     this.setAcitve(hash);

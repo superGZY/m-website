@@ -31,7 +31,6 @@ class Flimmes {
         }
         //发送ajax请求数据
         let result = await positionModel.post('/api/ajax/movie?forceUpdate=1570848448936', datas)
-        console.log(result.cinemas)
         let str = "";
         if (result.cinemas.length != 0) {
             let cinemas = result.cinemas;
@@ -72,25 +71,22 @@ class Flimmes {
             $('.cinema-list .list-wrap').html(htmlfilelist);
             $(this).addClass('chosen').siblings().removeClass('chosen');
         })
-        //点击筛选地址事件
-        $('.mb-line-b .item').on('tap', async function () {
-            let index = $(".mb-line-b .item").index($(this))
+        //bg页面的渲染
+        let html2 = selectView({})
+        $('.bg').html(html2);
+        //渲染日期列表
+        $('#timeline2').html(str);
+        $('#timeline2 li').eq(0).addClass('chosen');
 
-            let mask = document.createElement('div');
-            $(mask).addClass('mask');
-            $('#root').append(mask);
-            let bg = document.createElement('div')
-            $(bg).addClass('bg');
-            //添加bg
-            $('#root').append(bg);
-            let html = selectView({})
-            $(bg).html(html);
+        //点击筛选地址事件
+        $('.mb-line-b .item').eq(0).on('tap', async function () {
+            $('.mask').css('display','block')
+            $('.bg').css('display','block')
+
             //样式
-            //console.log($('.mb-line-b .item'));
+            let index = $(".mb-line-b .item").index($(this))
             $('.mb-line-b .item').eq(index + 3).addClass('chosenTitle').siblings().removeClass('chosenTitle');
-            //渲染日期列表
-            $('#timeline2').html(str);
-            $('#timeline2 li').eq(0).addClass('chosen');
+            
             function lonmchoice() {
                 //存储
                 if ($('#filter-list div').index($(this)) == 0) {
@@ -98,22 +94,21 @@ class Flimmes {
                     let mes = $('#subway div.gray').get(0).innerText;
                     let re = /\（\S+/;
                     mes = mes.replace(re, '');
-                    console.log(mes);
                     localStorage.setItem('filmlocation', mes);
                 }
                 else {
                     let mes2 = this.innerText;
                     let re = /\（\S+/;
                     mes2 = mes2.replace(re, '');
-                    console.log(mes2);
                     localStorage.setItem('filmlocation', mes2);
                 }
                 //移除
-                $('.mask').remove()
-                $('.bg').remove()
+                $('.mask').css('display','none')
+                $('.bg').css('display','none')
                 let lonm = localStorage.getItem('filmlocation');
                 $('.mb-line-b .chosenTitle .lonm').html(lonm);
             }
+
             async function getsubwaymes() {
                 let resultsubway = await positionModel.get(`/api/ajax/filterCinemas?movieId=1230121&day=${date}`)
                 let subway = resultsubway.subway.subItems
@@ -131,21 +126,26 @@ class Flimmes {
             }
             async function getlocation() {
                 let resultsubway = await positionModel.get(`/api/ajax/filterCinemas?movieId=1230121&day=${date}`);
-                let subway = resultsubway.district.subItems
-                let html2 = subwayView({ subway })
-                $('#subway').html(html2);
-                $('#subway div').eq(0).addClass('gray');
-                $('#subway div').on('click', function () {
-                    $(this).addClass('gray').siblings().removeClass('gray');
-                    let index = $("#subway div").index($(this));
-                    let subway = resultsubway.subway.subItems[index].subItems;
+                if(resultsubway.district){
+                    let subway = resultsubway.district.subItems
                     let html2 = subwayView({ subway })
-                    $('#filter-list').html(html2);
-                    $('#filter-list div').on('click', lonmchoice)
-                })
+                    $('#subway').html(html2);
+                    $('#subway div').eq(0).addClass('gray');
+                    $('#subway div').on('click', function () {
+                        $(this).addClass('gray').siblings().removeClass('gray');
+                        let index = $("#subway div").index($(this));
+                        let subway = resultsubway.district.subItems[index].subItems;
+                        let html2 = subwayView({ subway })
+                        $('#filter-list').html(html2);
+                        $('#filter-list div').on('click', lonmchoice)
+                    })
+                }
+                
             }
+
             //初始化
             getsubwaymes();
+            //切换日期
             $('#timeline2 li').on('tap', async function () {
                 $(this).addClass('chosen').siblings().removeClass('chosen');
                 date = $(this).html()
@@ -171,17 +171,20 @@ class Flimmes {
             //点击商家地铁站
             $('.film-filter-bar .tab li').eq(0).on('tap', async function () {
                 $(this).addClass('chosen').siblings().removeClass('chosen');
+                $('#filter-list').html('')
                 getlocation();
+                
 
             })
             $('.film-filter-bar .tab li').eq(1).on('tap', function () {
                 $(this).addClass('chosen').siblings().removeClass('chosen');
+                $('#filter-list').html('')
                 getsubwaymes();
             })
             //点击mask
             $('.mask').on('click', function () {
-                $('.mask').remove()
-                $('.bg').remove()
+                $('.mask').css('display','none')
+                $('.bg').css('display','none')
             })
         })
     }

@@ -1,0 +1,33 @@
+<div class="search-wrap">
+    <main>
+    <header>
+        <div class="nav-wrap-left">
+        <a class="react-back" onclick="javascript: window.history.back();return false;">&lt;</a>
+        </div>
+        <h1>猫眼电影</h1> 
+    </header>
+    <div class="search-header">
+        <div class="input-wrapper">
+            <img class="search-icon" src="http://s0.meituan.net/bs/?f=myfe/canary:/static/deploy/images/search.png"/>
+            <input class="search-input" type="text" placeholder="搜电影、搜影院"/>
+            <img style="display: none;" class="del-input" src="http://s0.meituan.net/bs/?f=myfe/canary:/static/deploy/images/close.png"s/>
+        </div>
+        <div class="cancel" >取消</div>
+    </div>
+    <div class="search-history">
+    </div>
+    <div class="search-result" style="display: none;">
+        <div class="result-wrapper">
+            <div class="result">
+                <h3>电影/电视剧/综艺</h3>
+                <div class="list"></div>
+                <div class="more-result" data-total ="">查看全部1727部影视剧</div>
+            </div>
+            <div class="result" style="display: none;">
+                <h3>影院</h3>
+                <div class="list"></div>
+            </div>
+        </div>
+    </div>
+</main>
+</div>

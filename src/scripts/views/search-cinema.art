@@ -1,0 +1,20 @@
+{{each list2}}
+<div class="cinema-cell">
+    <div class="info">
+        <p class="name-price">
+            <span class="name">{{$value.nm}}</span>
+            <span class="sell-price">
+                <span class="price">{{$value.sellPrice}}</span>
+                元起
+            </span>
+        </p>
+        <p class="address">{{$value.addr}}</p>
+        <p class="feature-tags">
+            <span>座</span>
+            <span>杜比全景声厅</span>
+            <span class="featrue">小吃</span>
+        </p>
+    </div>
+    <div class="distance">{{$value.distance}}</div>
+</div>
+{{/each}}
