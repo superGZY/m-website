@@ -57,7 +57,7 @@ class Flimmes {
         let date = ''
         $('#timeline li').on('tap', async function () {
             $(this).addClass('chosen').siblings().removeClass('chosen');
-            date = $(this).html()
+            date = this.innerText
             let datas = {
                 movieId: id,
                 day: date,
@@ -87,7 +87,8 @@ class Flimmes {
             let index = $(".mb-line-b .item").index($(this))
             $('.mb-line-b .item').eq(index + 3).addClass('chosenTitle').siblings().removeClass('chosenTitle');
             
-            function lonmchoice() {
+            async function lonmchoice() {
+                var data =''
                 //存储
                 if ($('#filter-list div').index($(this)) == 0) {
 
@@ -95,18 +96,45 @@ class Flimmes {
                     let re = /\（\S+/;
                     mes = mes.replace(re, '');
                     localStorage.setItem('filmlocation', mes);
+                    data = {
+                        movieId: id,
+                        day: date,
+                        offset: 0,
+                        limit: 20,
+                        districtId: $('#subway .gray').attr('data-id'),
+                        lineId: -1,
+                        areaId: $(this).attr('data-id'),
+                        stationId: -1,
+                    }
                 }
                 else {
                     let mes2 = this.innerText;
                     let re = /\（\S+/;
                     mes2 = mes2.replace(re, '');
                     localStorage.setItem('filmlocation', mes2);
+                    data = {
+                        movieId: id,
+                        day: date,
+                        offset: 0,
+                        limit: 20,
+                        districtId: -1,
+                        lineId: $('#subway .chosen'),
+                        areaId: -1,
+                        stationId: $(this).attr('data-id'),
+                    }
+
                 }
                 //移除
                 $('.mask').css('display','none')
                 $('.bg').css('display','none')
                 let lonm = localStorage.getItem('filmlocation');
                 $('.mb-line-b .chosenTitle .lonm').html(lonm);
+
+
+                let result = await positionModel.post('/api/ajax/movie?forceUpdate=1570848448936', data)
+                let cinemas = result.cinemas;
+                let htmlfilelist = filmlistView({ cinemas })
+                $('.cinema-list .list-wrap').html(htmlfilelist);
             }
 
             async function getsubwaymes() {
@@ -147,34 +175,15 @@ class Flimmes {
             getsubwaymes();
             //切换日期
             $('#timeline2 li').on('tap', async function () {
-                $(this).addClass('chosen').siblings().removeClass('chosen');
-                date = $(this).html()
-                let datas = {
-                    movieId: id,
-                    day: date,
-                    limit: 20,
-                    updateShowDay: true,
-                    cityId: 1
-                }
-                let result = await positionModel.post('/api/ajax/movie?forceUpdate=1570848448936', datas)
-                let cinemas = result.cinemas;
-                let htmlfilelist = filmlistView({ cinemas })
-                $('.cinema-list .list-wrap').html(htmlfilelist);
-                $(this).addClass('chosen').siblings().removeClass('chosen');
-                if ($('.bg .tab .item').eq(3).hasClass('chosen')) {
-                    getlocation();
-                }
-                if ($('.bg .tab .item').eq(4).hasClass('chosen')) {
-                    getsubwaymes();
-                }
+                $('#timeline li').eq($(this).index()).trigger('tap')
+                $('.mask').css('display','none')
+                $('.bg').css('display','none')
             })
             //点击商家地铁站
             $('.film-filter-bar .tab li').eq(0).on('tap', async function () {
                 $(this).addClass('chosen').siblings().removeClass('chosen');
                 $('#filter-list').html('')
                 getlocation();
-                
-
             })
             $('.film-filter-bar .tab li').eq(1).on('tap', function () {
                 $(this).addClass('chosen').siblings().removeClass('chosen');

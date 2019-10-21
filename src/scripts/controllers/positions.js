@@ -97,7 +97,7 @@ class Position {
         //数据拼接，重新渲染
         newlist = [...newlist, ...newResult.coming];
         that.renderer(newlist);
-
+        bScroll.refresh();
         //复原效果
         bScroll.scrollBy(0, 40);
         $imgFoot.attr('src', '/assets/images/arrow.png');

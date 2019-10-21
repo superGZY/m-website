@@ -4,6 +4,8 @@ const positionajax = require('../models/postion')
 import nextshowList1 from '../views/nextshowlist1.art'
 import nextshowList2 from '../views/nextshowlist2.art'
 const BScroll = require('better-scroll')
+var _ = require('lodash');
+var fp = require('lodash/fp');
 class Nextshow{
     constructor(){
         /* this.rander(); */
@@ -45,9 +47,13 @@ class Nextshow{
         this.renderer(resultComing);
         //把list2加入到coming-list里
         let result2 = await positionajax.get('/api/ajax/comingList?ci=1&token=&limit=10');
-        let list = result2.coming;
+        let listold = result2.coming;
         //图片路径修正
-        urlchange(list,'128.180')
+        urlchange(listold,'128.180')
+        let list = _.sortBy(listold, "comingTitle");
+        list = _.groupBy(list, 'comingTitle');
+      
+        
         let list1html2 = nextshowList2({
             list
           })
@@ -87,11 +93,14 @@ class Nextshow{
                 urlchange(newResult2.coming,'128.180');
 
                 //数据拼接，重新渲染
-                list = [...list, ...newResult2.coming];
+                listold = [...listold, ...newResult2.coming];
+                list = _.sortBy(listold, "comingTitle");
+                list = _.groupBy(list, 'comingTitle');
                 let list1html2 = nextshowList2({
                     list
                   })
                 $('.coming-list-list').html(list1html2)
+                bScroll.refresh();
                 $('.foot img').attr('src', '/assets/images/arrow.png');
                 bScroll.scrollBy(0, 40);
             }
